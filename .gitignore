@@ -1,0 +1,12 @@
+.DS_Store
+*-
+.classpath
+*~
+.cache
+.idea
+.idea_modules/
+.project
+.settings/
+*.iml
+*.stackdump
+classes/
