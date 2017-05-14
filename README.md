@@ -2,9 +2,16 @@
 
 `deserialize` is the counterpart to jQuery's [serialize](https://api.jQuery.com/serialize/) method.
 
+I did not write the `deserialize` method, it evolved on [StackOverflow](http://stackoverflow.com/a/11156405/553865).
+I just renamed it to `deserialize`.
+
 ## Quick Review of jQuery's serialize Method
 The `serialize()` method creates a text string in standard URL-encoded notation.
 Typically the `serialize()` method is used to serialize an entire `<form>`.
+
+Here is an example of serializing form data into a string:
+
+    var serializedFormData = $("#myForm").serialize();
 
 In the following example, jQuery sends a POST to `url`, containing data serialized from
 the form with id `myForm`.
@@ -24,18 +31,12 @@ $.post(
 );
 ```
 
-jQuery serializes the successful controls within a form.
-Only form elements are examined for inputs.
-
-Here is an example of serializing form data into a string:
-
-    var serializedFormData = $("#myForm").serialize();
-
 ## Using Deserialize
 Use the `deserialize` method provided by `deserialize.js` to populate a form from a serialized string.
 This code example shows how an Ajax call to `url` that returns data with `Content-Type: application/x-www-form-urlencoded` populates the form fields in the form with id `myForm`:
 
 ```
+var url = "http://blah.com/whatever";
 $.get(url, function(data) {
       $("#myForm").deserialize(data)
     },
@@ -44,9 +45,6 @@ $.get(url, function(data) {
   }
 );
 ```
-
-I did not write this method, it evolved on [StackOverflow](http://stackoverflow.com/a/11156405/553865).
-I just renamed it to `deserialize`.
 
 ## Why Not Add This to jQuery?
 

@@ -3,11 +3,8 @@
 // See http://stackoverflow.com/a/11156405/553865
 $.fn.deserialize = function (data) {
   var inps = $(this).find(":input").get();
-
   if (typeof data !== "object") {
-    // return all data
     data = {};
-
     $.each(inps, function () {
       if (this.name && (this.checked
         || /select|textarea/i.test(this.nodeName)
