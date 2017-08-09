@@ -1,5 +1,7 @@
 # jQuery deserialize
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 `deserialize` is the counterpart to jQuery's [serialize](https://api.jQuery.com/serialize/) method.
 
 I did not write the `deserialize` method, it evolved on [StackOverflow](http://stackoverflow.com/a/11156405/553865).
